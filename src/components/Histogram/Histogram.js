@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import * as d3 from 'd3';
 
 import HistogramBar from './HistogramBar'
+import Axis from './Axis'
 
 class Histogram extends Component {
     
@@ -62,7 +63,12 @@ class Histogram extends Component {
                 <g className="bars"> 
                     {bars.map(this.makeBar.bind(this))}
                 </g> 
-            </g>
+                
+                <Axis x={this.props.axisMargin-3}
+                    y={0}
+                    data={bars}
+                    scale={this.yScale} />
+            </g>        
         );
     
     }
