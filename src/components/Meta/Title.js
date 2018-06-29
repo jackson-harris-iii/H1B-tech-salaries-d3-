@@ -44,6 +44,7 @@ class Title extends Component {
                 }
             }
         }
+        return title
     }    
 
     get format() {
@@ -68,6 +69,8 @@ class Title extends Component {
                     {this.jobTitleFragment} ${mean}/year {this.USstateFragment ? `in ${this.stateFragment}` : ''} {this.yearsFragment}
                 </h2>);
         }
+
+        return title
     }
 }    
 
