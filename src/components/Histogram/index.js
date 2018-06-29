@@ -1,4 +1,1 @@
-
-import Histogram from './Histogram';
-
-export default Histogram;
+export { default } from './Histogram'
